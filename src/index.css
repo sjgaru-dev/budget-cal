@@ -1,0 +1,46 @@
+:root {
+  --primaryColor: #007bff;
+  --secondaryColor: #6c757d;
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --mainRed: #ff0000;
+  --mainGreen: #00ff00;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--secondaryColor);
+  color: var(--mainBlack);
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-icon {
+  font-size: 1.2rem;
+  margin-left: 0.75rem;
+}
