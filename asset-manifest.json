@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/budget-cal/static/css/main.44d22d24.css",
+    "main.js": "/budget-cal/static/js/main.5550980c.js",
+    "static/js/453.f2edec3a.chunk.js": "/budget-cal/static/js/453.f2edec3a.chunk.js",
+    "index.html": "/budget-cal/index.html",
+    "main.44d22d24.css.map": "/budget-cal/static/css/main.44d22d24.css.map",
+    "main.5550980c.js.map": "/budget-cal/static/js/main.5550980c.js.map",
+    "453.f2edec3a.chunk.js.map": "/budget-cal/static/js/453.f2edec3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44d22d24.css",
+    "static/js/main.5550980c.js"
+  ]
+}
