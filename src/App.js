@@ -4,11 +4,35 @@ import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
 
 const App = () => {
+
+  const [charge, setCharge] = useState("");
+  const [amount, setAmount] = useState(0);
+
   const [expenses, setExpenses] = useState([
-    { id: 1, charge: 'rent', amount: 1600 },
-    { id: 2, charge: 'car payment', amount: 400 },
-    { id: 3, charge: 'credit card bill', amount: 1200 }
   ]);
+
+
+  const handleCharge = (e) => {
+    console.log(`charge: ${e.target.value}`);
+    setCharge(e.target.value);
+  }
+
+  const handleAmount = (e) => {
+    console.log(`amount: ${e.target.value}`);
+    setAmount(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (charge !== "" && amount > 0) {
+      const singleExpense = { id: expenses.length + 1, charge, amount };
+      setExpenses([...expenses, singleExpense]);
+      setCharge("");
+      setAmount(0);
+    } else {
+      console.log("charge or amount can't be empty or amount must be bigger than zero");
+    }
+  }
 
 
   const handleDelete = (id) => {
@@ -26,7 +50,10 @@ const App = () => {
 
         <div
           style={{ width: '100%', backgroundColor: 'white', padding: '1rem' }}>
-          <ExpenseForm />
+          <ExpenseForm charge={charge} handleCharge={handleCharge}
+            handleAmount={handleAmount}
+            amount={amount}
+            handleSubmit={ handleSubmit} />
         </div>
 
         <div
